@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/main_background"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:fillViewport="true">
+<android.support.constraint.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
 
     <Button
         android:layout_width="30dp"
@@ -52,12 +56,14 @@
         android:layout_marginTop="110dp"/>
 
     <TextView
+        android:id="@+id/twShowMore"
         style="@style/main_bold_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_margin="35dp"
         android:text="SHOW MORE"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button" />
   </android.support.constraint.ConstraintLayout>
+  </ScrollView>

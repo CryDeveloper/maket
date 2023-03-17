@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".BuyTickets"
-    android:background="@drawable/main_background">
+    android:background="@drawable/main_background"
+    android:fillViewport="true">
+<android.support.constraint.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
 
     <Button
         android:layout_width="30dp"
@@ -24,19 +28,52 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="30dp"
+        android:paddingBottom="30dp">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Ticket price: 20$"
-            android:textAlignment="center"
-            android:textColor="@color/white"
+            style="@style/thin_text"
             android:textSize="18dp" />
+
         <EditText
-            android:layout_width="wrap_content"
+            android:id="@+id/editTextFullName"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="ФИО"/>
+            android:background="@drawable/bg_edit_text"
+            android:hint="ФИО"
+            android:layout_marginTop="20dp"
+            android:textAlignment="center"
+            style="@style/thin_text"
+            android:textColorHint="@color/white" />
+
+        <EditText
+            android:id="@+id/editTextMail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_edit_text"
+            android:hint="Mail"
+            android:layout_marginTop="20dp"
+            style="@style/thin_text"
+            android:textColorHint="@color/white" />
+
+        <Button
+            android:id="@+id/btnPay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PAY"
+            style="@style/main_bold_text"
+            android:background="@drawable/bg_text_btn"
+            android:layout_marginTop="75dp"
+            android:layout_marginLeft="45dp"
+            android:layout_marginRight="45dp"/>
+
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
+</ScrollView>
